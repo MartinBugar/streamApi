@@ -6,8 +6,16 @@ public class OptionalExample {
     public static void main(String[] args) {
 
  //       basicOptional();
+ //       moreOptional();
+        orElseOptional();
+    }
 
-        moreOptional();
+    private static void orElseOptional() {
+        Optional <String> meno = Optional.of("Martin");
+        Optional <String> prazdne = Optional.empty();
+
+        System.out.println(meno.orElse("nic")); // vypise hodnotu z mena, ked je meno null tak vypice slovo "nic"
+
     }
 
     private static void moreOptional() {
