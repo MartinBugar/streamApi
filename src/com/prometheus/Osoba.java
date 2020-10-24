@@ -1,14 +1,16 @@
 package com.prometheus;
 
+import java.util.Optional;
+
 public class Osoba {
 
     private String meno;
-    private String priezvisko;
+    private Optional<String> priezvisko;
     private int vek;
 
     public Osoba(String meno, String priezvisko, int vek) {
         this.meno = meno;
-        this.priezvisko = priezvisko;
+        this.priezvisko = Optional.ofNullable(priezvisko);
         this.vek = vek;
     }
 
@@ -20,12 +22,12 @@ public class Osoba {
         this.meno = meno;
     }
 
-    public String getPriezvisko() {
+    public Optional<String> getPriezvisko() {
         return priezvisko;
     }
 
     public void setPriezvisko(String priezvisko) {
-        this.priezvisko = priezvisko;
+        this.priezvisko = Optional.ofNullable(priezvisko);
     }
 
     public int getVek() {
@@ -37,7 +39,7 @@ public class Osoba {
     }
 
     @Override
-    public String toString() {
+    public String  toString() {
         return "Osoba{" +
                 "meno='" + meno + '\'' +
                 ", priezvisko='" + priezvisko + '\'' +

@@ -7,7 +7,14 @@ public class OptionalExample {
 
  //       basicOptional();
  //       moreOptional();
-        orElseOptional();
+ //       orElseOptional();
+
+        realLife();
+    }
+
+    private static void realLife() {
+        Osoba o = new Osoba("Martin", null,30);
+        o.getPriezvisko().ifPresent(pr -> System.out.println(pr.toUpperCase()));
     }
 
     private static void orElseOptional() {
