@@ -18,5 +18,11 @@ public class Stream {
                  .filter(osoba -> osoba.getVek() < 50)
                  .forEach(System.out::println);
 
+       long pocet =  osoby.stream()
+                .filter(osoba -> osoba.getVek() < 50)
+                .count();
+
+        System.out.println(pocet);
+
     }
 }
