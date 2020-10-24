@@ -15,6 +15,7 @@ public class OptionalExample {
         Optional <String> prazdne = Optional.empty();
 
         System.out.println(meno.orElse("nic")); // vypise hodnotu z mena, ked je meno null tak vypice slovo "nic"
+        System.out.println(meno.orElseGet(()->"nic")); //to iste len mozem napisat lampba vyraz
 
     }
 
